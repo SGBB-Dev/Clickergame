@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarCorgi clicker game 🐉</title>
+</head>
+  <ON>                     
+      <p> Score: <span id="score">0</span> Bow wow WarCorgi </p>
+      <img src="/Gameimage/battlecorgi.png" height="100px" width="100px" onclick="addToScore(1)">
+
+      <!-- ON CLICK EVENT ALLOWS TO ADD +1 TO SCORE VIA ACTION -->
+      
+      <button onClick="buyCursor()"> Cursor [<span id="cursorcost">15</span>] --<span id="cursors">0</span></button>
+            
+      <script>
+        var score = 0;
+
+        /*
+        score = score + 1;
+
+        document.getElementById("").innerHTML=score;
+        
+        OLD - alert for score alert
+        */
+
+        var cursorCost = 15;
+        var cursors = 0;
+
+        function buyCursor() {
+          if (score >= cursorCost){
+              score = score - cursorCost;
+              cursors = cursors + 1; 
+              cursorCost= Math.round(cursorCost * 1.15);
+
+              document.getElementById("score").innerHTML = score;
+              document.getElementById("cursorCost").innerHTML = cursorCost;
+              document.getElementById("cursors").innerHTML = cursors;
+
+          }
+        }
+
+        /* creates the score change that creates a form of currancy for this particular clicker game
+              Math round and multiplying by 1.15 helps even out the math to prevent unnessesary decimals for game.
+              docs helps you buy a cursor in the game and increses the cost or difficulty lvl for game by taking more clicks to get a reward aka cursor.
+        */
+
+
+
+        function addToScore(amount) {
+          score = score + amount;
+          document.getElementById("score").innerHTML = score;
+        }
+        /* how score is added via the function that gives the order 
+        and input for the function to create the wanted behaviour */
+
+      </script>
+  </body>
+</html>
