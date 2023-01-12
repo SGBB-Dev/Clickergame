@@ -2,15 +2,52 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+.buttons{
+  display: flex;
+}
 
-.corgi_img {
+.button_row{
+  display: flex;
+  flex-direction: column;
+}
+
+.dark{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.light{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+
+}
+
+.war_corgi_img {
+    border: 3px solid #f8f404;
+    padding: 10px;
     display: block;
-    height: 100px;
-    width: 100px;
-    margin-bottom: 2rem;
+    height: 450px;
+    margin: 20px;
+  
+    
+}
+.light_corgi_img {
+    border: 3px solid #73AD21;
+    padding: 20px;
+    display: block;
+    height: 450px;
+    margin: 20px;
+   
 }

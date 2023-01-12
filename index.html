@@ -7,10 +7,20 @@
     <title>Corgi Clicker</title>
 </head>
 <body>
-    <h1>Corgi Clicker</h1>
+    <h1>Corgi Clicker Game </h1>
+
     <h2>Score: <span id="score-board">0</span></h2>
-    <img src="assets/battlecorgi.png"  class="corgi_img" alt="battle corgi">
-    <button id="click-me">+1 Score</button>
+    <div class="buttons">
+        <div class="button_row">
+            <img src="assets/war_corgi.png"  class="war_corgi_img" alt="war_corgi">
+            <button class="dark" id="summon-war-mana">+1 Dark Mana</button>
+        </div>
+        <div class="button_row">
+            <img src="assets/light_gardian_corgi.jpg"  class="light_corgi_img" alt="light_gardian_corgi">
+        <button class="light" id="summon-light-mana">+1 Light Mana</button>
+        </div>
+    </div>
+    
     
     <script src="scripts/clicker.js"></script>
 </body>

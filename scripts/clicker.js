@@ -3,17 +3,26 @@ function initClickerGame() {
 
     let score = 0
 
-    const button = document.querySelector("#click-me");
+    const warManaButton = document.querySelector("#summon-war-mana");
+    const lightManaButton = document.querySelector("#summon-light-mana");
     const scoreBoard = document.querySelector("#score-board");
 
-    function addToScore() {
-        console.log("clicked");
-        const num = 1
+    function addMana(num) {
         score += num;
         scoreBoard.innerHTML = score;
     }
 
-    button.addEventListener("click", addToScore);
+    function addWarMana () {
+        return addMana(1);
+    }
+
+    function addLightMana() {
+        return addMana(1);
+    }
+
+    
+    warManaButton.addEventListener("click", addWarMana);
+    lightManaButton.addEventListener("click", addLightMana);
 }
 
 initClickerGame();
