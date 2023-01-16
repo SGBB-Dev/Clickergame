@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -11,15 +12,26 @@ button {
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-.buttons{
-  display: flex;
+  margin: 0;
 }
 
-.button_row{
+.navbar {
+padding: .5rem;
+background-color: black;
+color: white;
+height: 50px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.game-title {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
+
 
 .dark{
   margin-left: auto;
@@ -31,23 +43,34 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
-
 }
 
-.war_corgi_img {
-    border: 3px solid #f8f404;
-    padding: 10px;
-    display: block;
-    height: 450px;
-    margin: 20px;
-  
-    
+.spawn-zone {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.light_corgi_img {
-    border: 3px solid #73AD21;
-    padding: 20px;
-    display: block;
-    height: 450px;
-    margin: 20px;
-   
+
+.spawned-clicker {
+  border: 3px solid #f8f404;
+  display: flex;
+  width: 200px;
+  padding: 1rem;
+  align-items: center;
+}
+
+.score {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.war-corgi-img {
+    width: 100px;
+  }
+
+.light-corgi-img {
+  width: 100px;
 }
